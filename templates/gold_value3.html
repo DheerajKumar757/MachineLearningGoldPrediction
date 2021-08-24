@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is an awesome website">
+    <title>Gold Value Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: rgb(243, 243, 243);">
+    <div class="container-fluid row pt-3 m-3">
+        <div class=" bg-light col-sm-4">
+            <label>How this works</label>
+        </div>
+        <div class="bg-light col-sm-8">
+            <form action='http://127.0.0.1:5000/prediction' method="post">
+                <div class='form-group'>
+                    <label>SPX:</label>
+                    <input type="number" name="spx" class="form-control" placeholder="Enter value">
+                </div>
+                <div class='form-group'>
+                    <label>USO:</label>
+                    <input type="number" name="uso" class="form-control" placeholder="Enter value">
+                </div>
+                <div class='form-group'>
+                    <label>SLV:</label>
+                    <input type="number" name="slv" class="form-control" placeholder="Enter value">
+                </div>
+                <div class='form-group'>
+                    <label>EUR/USD:</label>
+                    <input type="number" name="usd" class="form-control" placeholder="Enter value">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group">
+                    <b>Diagnosis:{{gold_output}}</b>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
